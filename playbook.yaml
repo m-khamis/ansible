@@ -9,7 +9,7 @@
                     dest: /home/ubuntu/repo/
                     clone: yes
                     update: yes
-
+          - name:  "install maven"
             apt: pkg={{ item }} state=latest update_cache=yes cache_valid_time=3600
             with_items:
                    - maven
