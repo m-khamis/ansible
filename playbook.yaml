@@ -1,10 +1,21 @@
-- name: "manage worker-1 and worker-2"
-  hosts: all
+- name: "manage server1"
+  hosts: server1
   become: true
   tasks:
 
-        - name: "ensure Alex user exists"
-          user:
-               name: alex
-               state: present
+          - name:  "Clone a github repository"
+            git:
+                    repo: https://github.com/vaadin/addressbook
+                    dest: /home/ubuntu/repo/
+                    clone: yes
+                    update: yes
+
+          - name: "install maven"
+            apt:
+                    name: maven
+                    state: present
+                    update_cache: yes
+
+          - name: "Compile"
+            command: mvn compile
       
