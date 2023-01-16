@@ -1,5 +1,5 @@
-- name: "manage worker1 and 2"
-  hosts: all
+- name: "manage server1"
+  hosts: server1
   become: true
   tasks:
 
