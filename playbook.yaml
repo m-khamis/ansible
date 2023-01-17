@@ -14,5 +14,5 @@
 
 
           - name: "Compile"
-            command: mvn compile
+            command: chdir=/home/ubuntu/addressbook/ mvn compile
       
