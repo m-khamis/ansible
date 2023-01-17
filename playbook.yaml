@@ -34,7 +34,7 @@
                  mode: 0755
 
           - name: download & unarchive
-           unarchive:
+            unarchive:
                     src: http://apache.cs.utah.edu/tomcat/tomcat-9/v9.0.16/bin/apache-tomcat-9.0.16.tar.gz
                     dest: /opt/tomcat
                     remote_src: yes
@@ -50,13 +50,13 @@
                 state: directory
 
           - name: Copy Tomcat service from local to remote
-           copy:
+            copy:
                src: tomcat.service
                dest: /etc/systemd/system/
                mode: 0755
 
           - name: Start and enable Tomcat service
-           systemd:
+            systemd:
                    name: tomcat
                    state: started
                    enabled: true
