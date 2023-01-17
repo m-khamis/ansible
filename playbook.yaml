@@ -33,14 +33,14 @@
                  state: directory
                  mode: 0755
 
-         - name: download & unarchive
+          - name: download & unarchive
            unarchive:
                     src: http://apache.cs.utah.edu/tomcat/tomcat-9/v9.0.16/bin/apache-tomcat-9.0.16.tar.gz
                     dest: /opt/tomcat
                     remote_src: yes
                     extra_opts: [--strip-components=1]
 
-         - name: Change ownership
+          - name: Change ownership
             file:
                 path: /opt/tomcat
                 owner: tomcat
@@ -49,13 +49,13 @@
                 recurse: yes
                 state: directory
 
-         - name: Copy Tomcat service from local to remote
+          - name: Copy Tomcat service from local to remote
            copy:
                src: tomcat.service
                dest: /etc/systemd/system/
                mode: 0755
 
-         - name: Start and enable Tomcat service
+          - name: Start and enable Tomcat service
            systemd:
                    name: tomcat
                    state: started
