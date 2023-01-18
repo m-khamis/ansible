@@ -27,5 +27,6 @@
             service:
                     name: tomcat98
                     state: restarted
+                    enabled: yes
 
 
