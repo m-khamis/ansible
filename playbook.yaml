@@ -13,6 +13,9 @@
             - name:  "install maven"
               apt: pkg=maven state=latest update_cache=yes cache_valid_time=3600
 
+            - name:  "run mvn package"
+              command: /home/ubuntu/addressbook/ mvn package
+              
             - name:  "install tomcat"
               apt: pkg=tomcat9 state=latest update_cache=yes cache_valid_time=3600
             
