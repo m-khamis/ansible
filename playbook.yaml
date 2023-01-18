@@ -10,7 +10,9 @@
                     clone: yes
                     update: yes
                     
-            
+            - name:  "install maven"
+              apt: pkg=maven state=latest update_cache=yes cache_valid_time=3600
+
             - name:  "install tomcat"
               apt: pkg=tomcat9 state=latest update_cache=yes cache_valid_time=3600
             
