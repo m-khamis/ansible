@@ -1,7 +1,6 @@
 - name: "manage server1"
   hosts: all
   become: true
-  become_user: root
   tasks:
 
           - name:  "Clone a github repository"
@@ -19,8 +18,7 @@
             
           - name:  "copy"
             copy:
-                 src: /addressbook/target/addressbook-2.0.war
+                 src: ./home/ubuntu/addressbook/target/addressbook-2.0.war
                  dest: /var/lib/tomcat9/webapps/
-                 remote_src: no
 
 
