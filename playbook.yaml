@@ -17,7 +17,7 @@
             - name:  "copy file"
               copy:
                     src: /home/ubuntu/addressbook/target/addressbook-2.0.war
-                    dest: /var/lib/tomcat9/webapps/addressbook3.war
+                    dest: /var/lib/tomcat9/webapps/addressbook4.war
                     remote_src: yes
               notify: "restart tomcat"               
   handlers:
