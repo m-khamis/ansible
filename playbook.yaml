@@ -17,7 +17,7 @@
             - name:  "copy file"
               copy:
                     src: /home/ubuntu/addressbook/target/addressbook-2.0.war
-                    dest: /var/lib/tomcat9/webapps/addressbook4.war
+                    dest: /var/lib/tomcat9/webapps/addressbook5.war
                     remote_src: yes
               notify: "restart tomcat"               
   handlers:
@@ -26,6 +26,8 @@
                        name: tomcat9
                        state: restarted
                        enabled: yes
+              debug:
+                       msg: "tomcat restarted" 
 
 
 
