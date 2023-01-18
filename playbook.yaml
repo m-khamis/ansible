@@ -17,8 +17,6 @@
               command: mvn package
               args:
                    chdir: /home/ubuntu/addressbook/
-                   
-              command: /home/ubuntu/addressbook/ mvn package
               
             - name:  "install tomcat"
               apt: pkg=tomcat9 state=latest update_cache=yes cache_valid_time=3600
