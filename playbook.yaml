@@ -25,7 +25,7 @@
   handlers:
           - name: "restart"
             service:
-                    name: tomcat9
+                    name: tomcat98
                     state: restarted
 
 
