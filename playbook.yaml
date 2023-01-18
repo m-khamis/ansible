@@ -23,11 +23,12 @@
                  
   handlers:
             - name:   "restart tomcat"
-              service:
-                      name: tomcat
-                      state: restarted
               debug: 
-                     msg: "This task has been executed successfully"
+                       msg: "This task has been executed successfully"
+              service:
+                       name: tomcat
+                       state: restarted
+
 
 
 
