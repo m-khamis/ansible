@@ -21,12 +21,12 @@
                  src: /home/ubuntu/addressbook/target/addressbook-2.0.war
                  dest: /var/lib/tomcat9/webapps/addressbook.war
                  remote_src: yes
-            notify: "restart"
+            notify: "restart tomcat"
                  
   handlers:
-          - name: "restart"
+          - name: "restart tomcat"
             service:
-                    name: tomcat98
+                    name: tomcat9
                     state: restarted
                     enabled: yes
 
