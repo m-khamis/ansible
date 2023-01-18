@@ -17,12 +17,17 @@
           - name:  "copy file"
             copy:
                  src: /home/ubuntu/addressbook/target/addressbook-2.0.war
-                 dest: /var/lib/tomcat9/webapps/addressbook1.war
+                 dest: /var/lib/tomcat9/webapps/addressbook2.war
                  remote_src: yes
             notify: "restart tomcat"
                  
   handlers:
           - name:   "restart tomcat"
+            service:
+                    name: tomcat
+                    state: restarted
+                    enabled: yes
+
             debug: 
                     msg: "This task has been executed successfully"
 
