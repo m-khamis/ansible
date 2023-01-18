@@ -19,7 +19,7 @@
             
           - name:  "copy"
             copy:
-                 src: /home/ubuntu/addressbook/target/addressbook-2.0.war
+                 src: /addressbook/target/addressbook-2.0.war
                  dest: /var/lib/tomcat9/webapps/
                  remote_src: no
 
