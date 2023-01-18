@@ -22,11 +22,7 @@
             notify: "restart tomcat"
                  
   handlers:
-          - name: "restart tomcat"
-            service:
-                    name: tomcat9
-                    state: restarted
-                    enabled: yes
+          - name:   "restart tomcat"
             debug: 
                     msg: "This task has been executed successfully"
 
