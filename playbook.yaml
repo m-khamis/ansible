@@ -2,23 +2,10 @@
   hosts: all
   become: true
   tasks:
-
-          - name:  "Clone a github repository"
-            git:
-                    repo: https://github.com/vaadin/addressbook
-                    dest: /home/ubuntu/addressbook/
-                    clone: yes
-                    update: yes
-                    
-          - name:  "install maven"
-            apt: pkg=maven state=latest update_cache=yes cache_valid_time=3600
-            
-          - name:  "install tomcat"
-            apt: pkg=tomcat9 state=latest update_cache=yes cache_valid_time=3600
             
           - name:  "copy"
             copy:
-                 src: ./home/ubuntu/addressbook/target/addressbook-2.0.war
+                 src: "/home/ubuntu/addressbook/target/addressbook-2.0.war"
                  dest: /var/lib/tomcat9/webapps/
                  remote_src: yes
 
