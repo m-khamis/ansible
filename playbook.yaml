@@ -19,7 +19,7 @@
             - name:  "copy file"
               copy:
                     src: /home/ubuntu/addressbook/target/addressbook-2.0.war
-                    dest: /var/lib/tomcat9/webapps/addressbook6.war
+                    dest: /var/lib/tomcat9/webapps/addressbook7.war
                     remote_src: yes
               notify: "restart tomcat"  
               
