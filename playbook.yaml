@@ -16,7 +16,7 @@
           - name:  "install tomcat"
             apt: pkg=tomcat9 state=latest update_cache=yes cache_valid_time=3600
             
-          - name: copy src.txt as dest.txt in the same dir 
+          - name:  "copy"
             copy:
                  src: /home/ubuntu/addressbook/target/addressbook-2.0.war
                  dest: /var/lib/tomcat9/webapps/addressbook.war
